@@ -1,0 +1,42 @@
+name: todo-ticket
+
+author: Dean Merchant <deanmerchant@gmail.com>
+copyright: 2017 Dean Merchant
+ghc-options: -Wall -fno-warn-type-defaults
+github: Dean177/todo-ticket
+license: MIT
+maintainer: Dean Merchant <deanmerchant@gmail.com>
+version: 0.1.0.0
+
+dependencies:
+  - base >= 4.7 && < 5
+  - containers
+  - conduit-combinators
+  - directory
+  - filepath
+  - megaparsec
+  - text
+
+library:
+  source-dirs:
+    - src
+  exposed-modules:
+    - Glob
+    - Parse
+    - Types
+
+executables:
+  todo-ticket:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+      - todo-ticket
+
+
+tests:
+  spec:
+    dependencies:
+      - hspec
+      - todo-ticket
+    main: Spec.hs
+    source-dirs: test

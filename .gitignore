@@ -1,0 +1,5 @@
+.idea/
+.stack-work/
+/.hspec-failures
+/todo-ticket.cabal
+/todo-ticket.iml
